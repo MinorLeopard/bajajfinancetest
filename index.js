@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -32,7 +32,7 @@ app.post('/api/bfhl', (req, res) => {
   }
 });
 
-app.get('/bfhl', (req, res) => {
+app.get('/api/bfhl', (req, res) => {
   const response = { operation_code: 1 };
   res.status(200).json(response);
 });

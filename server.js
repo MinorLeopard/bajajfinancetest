@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -9,7 +9,7 @@ const roll_number = "RA2011029010022";
 
 app.use(json());
 
-app.post('/bfhl', (req, res) => {
+app.post('/api/bfhl', (req, res) => {
   try {
     const data = req.body.data || [];
     const numbers = data.filter((x) => typeof x === 'number');
@@ -32,7 +32,7 @@ app.post('/bfhl', (req, res) => {
   }
 });
 
-app.get('/bfhl', (req, res) => {
+app.get('/api/bfhl', (req, res) => {
   const response = { operation_code: 1 };
   res.status(200).json(response);
 });
