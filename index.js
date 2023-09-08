@@ -9,7 +9,7 @@ const roll_number = "RA2011029010022";
 
 app.use(json());
 
-app.post('/', (req, res) => {
+app.post('/api/bhfl', (req, res) => {
   try {
     const data = req.body.data || [];
     const numbers = data.filter((x) => typeof x === 'number');
@@ -32,7 +32,7 @@ app.post('/', (req, res) => {
   }
 });
 
-app.get('/', (req, res) => {
+app.get('/api/bhfl', (req, res) => {
   const response = { operation_code: 1 };
   res.status(200).json(response);
 });
