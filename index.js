@@ -2,7 +2,6 @@ import express, { json } from 'express';
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Replace these values with your own
 const user_id = "harshit_prakash_06032001";
 const email = "hp5024@srmist.edu.in";
 const roll_number = "RA2011029010022";
