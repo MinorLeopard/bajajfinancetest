@@ -1,4 +1,4 @@
-const express = require('express');
+import express, { json } from 'express';
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -7,7 +7,7 @@ const user_id = "harshit_prakash_06032001";
 const email = "hp5024@srmist.edu.in";
 const roll_number = "RA2011029010022";
 
-app.use(express.json());
+app.use(json());
 
 app.post('/bfhl', (req, res) => {
   try {
