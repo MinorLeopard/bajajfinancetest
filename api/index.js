@@ -8,7 +8,7 @@ const roll_number = "RA2011029010022";
 
 app.use(json());
 
-app.post('/api', (req, res) => {
+app.post('/api/bhfl', (req, res) => {
   try {
     const data = req.body.data || [];
     const numbers = data.filter((x) => typeof x === 'number');
